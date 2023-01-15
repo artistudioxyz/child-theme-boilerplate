@@ -1,15 +1,18 @@
 # 🍔 Child Theme Boilerplate
 
-Just another WordPress Plugin and Theme boilerplate with TailwindCSS, SASS, Blocks, ESLint, Prettier, and more.
+Just another WordPress child theme Boilerplate using TailwindCSS, SASS, Prettier, and more.
 
 ## 📝 Installation
 - Create a new project `composer create-project artistudioxyz/child-theme-boilerplate {projectname}`
 - Install dependencies `npm install`
 - Build assets `npx grunt`
 
-## 📟 Commands
+### Configure the framework
 
+- Change `parent-theme` name in `style.css`
 - Install husky : `npx husky install`
+- Disable GitHub release-it in `.release-it.json`
+- Remove unused files using [aspri](https://github.com/artistudioxyz/aspri) : `aspri --clean --type wordpress`
 
 ## 🎉 Credits
 

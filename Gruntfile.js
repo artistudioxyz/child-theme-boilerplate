@@ -10,7 +10,13 @@ module.exports = function (grunt) {
 		/** Compile TailwindCSS - Cross Platform */
 		shell: {
 			npm_tailwind: {
-				command: `npx tailwindcss build assets/css/tailwind/style.css -o assets/build/css/tailwind.min.css --silent`,
+				command: () => {
+					let cmd = [
+						`npx tailwindcss build assets/css/tailwind/style.css -o assets/build/css/tailwind.min.css --silent`,
+						`node tailwindcsssupport.js`
+					];
+					return cmd.join(' && ');
+				}
 			},
 			sass: {
 				command: () => {
@@ -52,9 +58,7 @@ module.exports = function (grunt) {
 				files: [
 					'assets/css/**/*.scss',
 					'assets/css/**/*.css',
-					'src/View/**/*.php',
 					'*.php',
-					'template-parts/**/*.php',
 				],
 				tasks: ['build-css'],
 			},

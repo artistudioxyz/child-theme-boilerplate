@@ -1,0 +1,46 @@
+{
+  "name": "child-theme-boilerplate",
+  "version": "0.0.1",
+  "description": "Just another WordPress Plugin and Theme boilerplate with TailwindCSS, SASS, Blocks, ESLint, Prettier, and more.",
+  "scripts": {
+    "build:wp": "wp-scripts build",
+    "watch:wp": "wp-scripts start",
+    "release": "dotenv release-it --",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artistudioxyz/dot-framework.git"
+  },
+  "author": "Agung Sundoro",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/artistudioxyz/dot-framework/issues"
+  },
+  "homepage": "https://github.com/artistudioxyz/dot-framework#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@prettier/plugin-php": "^0.19.2",
+    "@release-it/bumper": "^4.0.0",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "dotenv-cli": "^6.0.0",
+    "eslint": "^8.30.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-shell": "^3.0.1",
+    "husky": "^8.0.2",
+    "node-sass": "^7.0.3",
+    "prettier": "^2.8.1",
+    "release-it": "^15.5.1",
+    "sass": "1.57.0",
+    "shelljs": "^0.8.5",
+    "tailwindcss": "^2.1.2"
+  },
+  "lint-staged": {
+    "assets/css/**/*.{css,scss}": "npx prettier --write",
+    "**/*.php": "prettier --write"
+  }
+}
