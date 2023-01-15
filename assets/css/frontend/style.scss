@@ -1,14 +1,9 @@
-.layartancap-container {
-	// Tailwind CSS
+// Tailwind CSS
+.tailwind-container {
 	@import '../../build/css/tailwind.min';
-
-	// General Asset
-	@import '_mixin';
-	@import '_asset';
-
-	// Template Modification
-	@import '_template';
 }
 
-/** External Styling */
-@import '_external';
+// Styling
+@import '_mixin';
+@import '_asset';
+@import '_template';

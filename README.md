@@ -22,7 +22,6 @@ Learn more about WordPress [Child Themes](https://developer.wordpress.org/themes
 - Change `parent-theme` name in `style.css`
 - Install husky : `npx husky install`
 - Disable GitHub release-it in `.release-it.json`
-- Remove unused files using [aspri](https://github.com/artistudioxyz/aspri) : `aspri --clean --type wordpress`
 
 ## 🎉 Credits
 

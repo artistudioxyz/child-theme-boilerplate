@@ -1,14 +1,11 @@
-.dot-container {
-	// Tailwind CSS
+// Tailwind CSS
+.tailwind-container {
 	@import '../../build/css/tailwind.min';
 
-	// General Asset
+	// Styling
 	@import '_mixin';
 	@import '_asset';
-
-	// Template Modification
 	@import '_template';
 }
 
-/** External Styling */
-@import '_external';
+@import "_external";
