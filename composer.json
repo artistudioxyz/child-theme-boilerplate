@@ -1,12 +1,7 @@
 {
-    "name": "artistudioxyz/dot-framework",
+    "name": "artistudioxyz/child-theme-boilerplate",
     "description": "Just another WordPress Plugin and Theme boilerplate with TailwindCSS, SASS, Blocks, ESLint, Prettier, and more.",
     "license" : "GPL-3.0",
-    "autoload": {
-      "psr-4": {
-        "Dot\\": "src"
-      }
-    },
     "authors": [
         {
             "name": "Agung Sundoro",

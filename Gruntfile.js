@@ -1,7 +1,5 @@
 /** Load Javascript Library */
 const path = require('path')
-let componentConfig = require( path.resolve(__dirname, 'assets/components/components.json') );
-let blockConfig = require( path.resolve(__dirname, 'blocks/blocks.json') );
 
 /** Export Module */
 module.exports = function (grunt) {
@@ -11,25 +9,9 @@ module.exports = function (grunt) {
 
 		/** Compile TailwindCSS - Cross Platform */
 		shell: {
-			...(() => { /** Get Shortcode Build Commands */
-				let shell = {}
-				blockConfig.map((b) => {
-					shell[`build_shortcode_${b.name}`] = {
-						command: `npx vite build -c blocks/${b.name}/vite.config.js`
-					}
-				})
-				return shell;
-			})(),
-			dot_refactor: {
-				command: `aspri --wp-refactor --path ${path.resolve( __dirname )} --from Dot --to Dot --type theme && composer dump-autoload`,
-			},
 			npm_tailwind: {
 				command: `npx tailwindcss build assets/css/tailwind/style.css -o assets/build/css/tailwind.min.css --silent`,
 			},
-			npm_wordpress: {
-				command: `npm run build:wp`,
-			},
-			original_assets: { command: `node originalassets.js` },
 			sass: {
 				command: () => {
 					let assets = { // No extension because added in loop command
@@ -66,40 +48,6 @@ module.exports = function (grunt) {
 			options: {
 				livereload: false,
 			},
-			blocks: (() => { /** WordPress Blocks and Shortcodes (React JS) */
-				let watcher = {};
-				componentConfig.map((b) => {
-					let FilesTasks = {
-						files: [
-							`blocks/${b.name}/**/*.js`,
-							`blocks/${b.name}/**/*.jsx`,
-						],
-						tasks: [`build-shortcode-${b.name}`, 'build-css']
-					};
-					watcher[`component_${b.name}`] = FilesTasks;
-				});
-				return watcher;
-			})(),
-			components: (() => { /** Svelte Components */
-				let watcher = {};
-				componentConfig.map((c) => {
-					let FilesTasks = {
-						files: [
-							`assets/components/${c.name}/**/*.js`,
-							`assets/components/${c.name}/**/*.svelte`,
-						],
-						tasks: [`build-component-${c.name}`, 'build-css']
-					};
-					watcher[`component_${c.name}`] = FilesTasks;
-				});
-				return watcher;
-			})(),
-			js: {
-				files: [
-					'assets/js/**/*.js'
-				],
-				tasks: ['build-js'],
-			},
 			css: {
 				files: [
 					'assets/css/**/*.scss',
@@ -118,16 +66,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
 
-	/** Shortcodes */
-	let ShortcodeBuild = [];
-	blockConfig.map((b) => {
-		ShortcodeBuild.push(`build-shortcode-${b.name}`)
-		grunt.registerTask(`build-shortcode-${b.name}`, [ `shell:build_shortcode_${b.name}` ]);
-	})
-
 	/** Register Tasks */
 	grunt.registerTask('build-css', [ 'shell:npm_tailwind', 'shell:sass', 'cssmin' ])
-	grunt.registerTask('build-js', ['shell:npm_wordpress', ...ShortcodeBuild])
-	grunt.registerTask('build', ['build-css', 'build-js'])
-	grunt.registerTask('default', ['build', 'shell:original_assets'])
+	grunt.registerTask('build', ['build-css'])
+	grunt.registerTask('default', ['build'])
 }
