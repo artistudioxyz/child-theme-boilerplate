@@ -10,7 +10,6 @@ Learn more about WordPress [Child Themes](https://developer.wordpress.org/themes
 - Build assets `npx grunt`
 
 ### Configure the framework
-
 - Change `parent-theme` name in `style.css`
 - Install husky : `npx husky install`
 - Disable GitHub release-it in `.release-it.json`
