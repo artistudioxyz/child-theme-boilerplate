@@ -4,12 +4,19 @@ Just another WordPress child theme Boilerplate using TailwindCSS, SASS, Prettier
 
 Learn more about WordPress [Child Themes](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
 
+<img src="https://img.shields.io/github/last-commit/artistudioxyz/child-theme-boilerplate" alt="Last Commit">
+<img src="https://img.shields.io/github/languages/code-size/artistudioxyz/child-theme-boilerplate" alt="Code Size">
+<img src="https://img.shields.io/github/v/tag/artistudioxyz/child-theme-boilerplate" alt="Latest Tag">
+<img src="https://github.com/artistudioxyz/child-theme-boilerplate/actions/workflows/workflow.yml/badge.svg" alt="Build Status">
+<img src="https://img.shields.io/github/stars/artistudioxyz/child-theme-boilerplate?style=social" alt="Stars">
+
 ## 📝 Installation
 - Create a new project `composer create-project artistudioxyz/child-theme-boilerplate {projectname}`
 - Install dependencies `npm install`
 - Build assets `npx grunt`
 
 ### Configure the framework
+
 - Change `parent-theme` name in `style.css`
 - Install husky : `npx husky install`
 - Disable GitHub release-it in `.release-it.json`
