@@ -2,6 +2,8 @@
 
 Just another WordPress child theme Boilerplate using TailwindCSS, SASS, Prettier, and more.
 
+Learn more about WordPress [Child Themes](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
+
 ## 📝 Installation
 - Create a new project `composer create-project artistudioxyz/child-theme-boilerplate {projectname}`
 - Install dependencies `npm install`
@@ -32,12 +34,6 @@ who had helped provide and develop these libraries
 - [SASS](https://sass-lang.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [WPCS](https://github.com/WordPress/WordPress-Coding-Standards)
-
-## 🤖 Used by
-- [artistudioxyz/bingopress](https://github.com/artistudioxyz/bingopress)
-- [artistudioxyz/floating-awesome-button](https://github.com/artistudioxyz/floating-awesome-button)
-- [agung2001/calo](https://github.com/agung2001/wp-calo)
-- [agung2001/layar-tancap](https://github.com/agung2001/wp-layar-tancap)
 
 ## ⭐️ Support & Contribution
 - Help support me by giving a 🌟 or [donate][website]
