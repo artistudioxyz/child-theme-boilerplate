@@ -1,6 +1,6 @@
 {
   "name": "child-theme-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Just another WordPress Plugin and Theme boilerplate with TailwindCSS, SASS, Blocks, ESLint, Prettier, and more.",
   "scripts": {
     "build:wp": "wp-scripts build",

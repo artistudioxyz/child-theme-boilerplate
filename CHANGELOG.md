@@ -1,5 +1,12 @@
 # 📟 Changelog
 
+## [0.1.1](https://github.com/artistudioxyz/dot-framework/compare/0.1.0...0.1.1) (2023-01-15)
+
+
+### Bug Fixes
+
+* frontend styles to be loaded externally ([391cb68](https://github.com/artistudioxyz/dot-framework/commit/391cb68e51dbaa76dc45ae887a394c9fb47cef46))
+
 ## 0.1.0 (2023-01-15)
 
 
